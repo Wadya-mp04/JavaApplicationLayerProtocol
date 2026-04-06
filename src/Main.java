@@ -12,3 +12,5 @@ public class Main {
         System.out.println(reconstructed);
     }
 }
+
+//file size is 970
