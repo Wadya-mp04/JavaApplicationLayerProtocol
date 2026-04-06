@@ -40,7 +40,7 @@ public class Client {
         DatagramPacket responseDp = new DatagramPacket(buffer, buffer.length);
         int expectedSeq = 0;
         boolean notDone = true;
-        FileOutputStream os = new FileOutputStream("received_" + filename);
+        FileOutputStream os = new FileOutputStream("received" + filename);
 
         while(notDone) {
             socket.receive(responseDp);
