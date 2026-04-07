@@ -30,8 +30,8 @@ public class Client {
         );
 
         byte[] data = request.toBytes();
-        DatagramPacket dp = new DatagramPacket(data, data.length, address, serverPort);
-        socket.send(dp);
+        DatagramPacket datapacket = new DatagramPacket(data, data.length, address, serverPort);
+        socket.send(datapacket);
 
         System.out.println("Sent request:");
         System.out.println(request);
@@ -54,10 +54,8 @@ public class Client {
             }
 
             if(packet.messageType == Protocol.DATA) {
-                if (packet.connectionId != connectionId){
-                    continue;
-                }
-                if (packet.sequenceNumber == expectedSeq) {
+                
+                if (packet.connectionId == connectionId && packet.sequenceNumber == expectedSeq) {
                     os.write(packet.payload);
 
                     Packet ack = new Packet(
