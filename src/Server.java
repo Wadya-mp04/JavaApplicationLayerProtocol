@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.io.*;
 import java.util.Arrays;
 
-public class 40297607_40233651_Lab3_Server {
+public class Server {
     public static void main(String[] args) throws Exception {
         int port = Integer.parseInt(args[0]);
         int timeout = Integer.parseInt(args[1]);
