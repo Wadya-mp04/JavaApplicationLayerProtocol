@@ -3,7 +3,7 @@ import java.net.*;
 import java.nio.*;
 import java.nio.charset.StandardCharsets;
 
-public class 40297607_40233651_Lab3_Client {
+public class Client {
     public static void main(String[] args) throws Exception {
         String serverIp = args[0];
         int serverPort = Integer.parseInt(args[1]);
